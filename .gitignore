@@ -58,3 +58,29 @@ pytest_cache/
 staticfiles/
 media/
 
+# Next.js
+frontend/.next/
+frontend/out/
+frontend/build/
+frontend/dist/
+
+# Node.js
+node_modules/
+frontend/node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# Next.js cache
+frontend/.next/cache/
+
+# TypeScript
+*.tsbuildinfo
+frontend/.tsbuildinfo
+
+# Vercel
+.vercel
+
+# Turbo
+.turbo

@@ -4,9 +4,9 @@ from sqlalchemy.orm import Session
 from sqlalchemy import select, case, func, asc, desc
 from datetime import datetime
 
-from .database import Base, engine, get_db
-from .models import Todo
-from .schemas import TodoCreate, TodoUpdate, TodoOut
+from database import Base, engine, get_db
+from models import Todo
+from schemas import TodoCreate, TodoUpdate, TodoOut
 
 app = FastAPI(title="Todo Backend (FastAPI + SQLAlchemy + SQLite)")
 
