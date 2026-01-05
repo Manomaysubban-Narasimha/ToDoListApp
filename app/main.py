@@ -1,4 +1,5 @@
 from fastapi import FastAPI, Depends, HTTPException, Query
+from fastapi.middleware.cors import CORSMiddleware
 from sqlalchemy.orm import Session
 from sqlalchemy import select, case, func, asc, desc
 from datetime import datetime
@@ -8,6 +9,14 @@ from .models import Todo
 from .schemas import TodoCreate, TodoUpdate, TodoOut
 
 app = FastAPI(title="Todo Backend (FastAPI + SQLAlchemy + SQLite)")
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 # Minimal approach: create tables on startup (no migrations).
 Base.metadata.create_all(bind=engine)
