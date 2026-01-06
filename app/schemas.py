@@ -1,3 +1,7 @@
+"""
+Pydantic schemas (various shapes that data can take) for the todo app.
+"""
+
 from pydantic import BaseModel, Field
 from datetime import datetime
 

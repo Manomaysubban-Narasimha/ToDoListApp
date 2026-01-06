@@ -1,3 +1,7 @@
+"""
+Database models for the todo app.
+"""
+
 from sqlalchemy import String, DateTime, Boolean, Text
 from sqlalchemy.orm import Mapped, mapped_column
 from datetime import datetime
